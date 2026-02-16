@@ -643,6 +643,26 @@ section{padding:80px 28px;}
   text-align:center;
 }
 
+.form-disclaimer{
+  background:linear-gradient(135deg, #fff3cd, #fff8e1);
+  border-left:4px solid #ffc107;
+  padding:16px;
+  margin-bottom:24px;
+  border-radius:0 6px 6px 0;
+}
+
+.form-disclaimer p{
+  font-size:13px;
+  line-height:1.6;
+  color:var(--text);
+  margin:0;
+}
+
+.form-disclaimer strong{
+  color:var(--navy);
+  font-weight:600;
+}
+
 /* ===== CRISIS RESOURCES ===== */
 .crisis-banner{
   background:linear-gradient(135deg,#c92a2a,#e03131);
@@ -1227,6 +1247,9 @@ footer{
       
       <div class="contact-form-box">
         <h3>Request an Appointment</h3>
+        <div class="form-disclaimer">
+          <p><strong>📋 Note:</strong> This form is for appointment requests only. Please do not include detailed medical or mental health information. We will discuss your needs confidentially during our scheduled appointment.</p>
+        </div>
         <form id="contact-form" onsubmit="handleFormSubmit(event)">
           <div class="form-group">
             <label for="name">Full Name *</label>
