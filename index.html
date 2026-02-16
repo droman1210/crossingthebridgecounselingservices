@@ -1250,10 +1250,10 @@ footer{
         <div class="form-disclaimer">
           <p><strong>📋 Note:</strong> This form is for appointment requests only. Please do not include detailed medical or mental health information. We will discuss your needs confidentially during our scheduled appointment.</p>
         </div>
-        <form id="contact-form" onsubmit="handleFormSubmit(event)">
+        <form action="https://formspree.io/f/mnjbvjjj" method="POST">
           <div class="form-group">
             <label for="name">Full Name *</label>
-            <input type="text" id="name" name="name" required>
+            <input type="email" id="email" name="_replyto" required>
           </div>
           <div class="form-group">
             <label for="email">Email Address *</label>
@@ -1362,24 +1362,6 @@ function toggleFaq(button) {
     item.classList.add('active');
     answer.style.maxHeight = answer.scrollHeight + 'px';
   }
-}
-
-// Form submission handler
-function handleFormSubmit(event) {
-  event.preventDefault();
-  
-  // Get form data
-  const formData = new FormData(event.target);
-  const data = Object.fromEntries(formData);
-  
-  // Here you would typically send this to your server or email service
-  // For now, we'll just show an alert and log to console
-  console.log('Form submission:', data);
-  
-  alert('Thank you for your interest! We\'ve received your request and will contact you within 1-2 business days to schedule your appointment.\n\nIf you need immediate assistance, please call us at (407) 602-8567.');
-  
-  // Reset form
-  event.target.reset();
 }
 </script>
 
