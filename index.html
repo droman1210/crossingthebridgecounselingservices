@@ -1212,7 +1212,7 @@ footer{
           <div class="contact-icon">✉️</div>
           <div>
             <p class="contact-label">Email</p>
-            <p class="contact-value"><a href="mailto:crossing.bridges@outlook.com">crossing.bridges@outlook.com</a></p>
+            <p class="contact-value"><a href="/cdn-cgi/l/email-protection#583b2a372b2b31363f763a2a313c3f3d2b18372d2c34373733763b3735"><span class="__cf_email__" data-cfemail="2d4e5f425e5e44434a034f5f44494a485e6d42585941424246034e4240">[email&#160;protected]</span></a></p>
           </div>
         </div>
         <div class="contact-item">
@@ -1250,14 +1250,14 @@ footer{
         <div class="form-disclaimer">
           <p><strong>📋 Note:</strong> This form is for appointment requests only. Please do not include detailed medical or mental health information. We will discuss your needs confidentially during our scheduled appointment.</p>
         </div>
-        <form action="https://formspree.io/f/mnjbvjjj" method="POST">
+        <form action="https://formspree.io/f/mnnjbvjj" method="POST">
           <div class="form-group">
             <label for="name">Full Name *</label>
-            <input type="text" id="email" name="_replyto" required>
+            <input type="text" id="name" name="name" required>
           </div>
           <div class="form-group">
             <label for="email">Email Address *</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="_replyto" required>
           </div>
           <div class="form-group">
             <label for="phone">Phone Number *</label>
@@ -1278,6 +1278,7 @@ footer{
             <label for="message">Message</label>
             <textarea id="message" name="message" placeholder="Tell us a bit about what brings you here..."></textarea>
           </div>
+          <input type="hidden" name="_subject" value="New Appointment Request - Crossing The Bridge">
           <button type="submit" class="form-submit">Submit Request</button>
           <p class="form-note">We'll respond within 1-2 business days to schedule your appointment.</p>
         </form>
@@ -1327,7 +1328,7 @@ footer{
   </div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // Navbar scroll effect
 const nav = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
