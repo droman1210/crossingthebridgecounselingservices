@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -186,11 +186,13 @@ section{padding:80px 28px;}
   margin-bottom:12px;
 }
 
+/* ===== SECTION TITLES — italic across all sections ===== */
 .section-title{
   font-family:'Playfair Display',serif;
   font-size:clamp(28px,4vw,40px);
   font-weight:600;color:var(--navy);
   line-height:1.2;margin-bottom:20px;
+  font-style:italic;
 }
 
 .section-desc{
@@ -231,16 +233,15 @@ section{padding:80px 28px;}
   box-shadow:0 4px 24px var(--shadow);
 }
 
-/* UPDATED: Photo styling for real image */
 .cred-photo{
-  width:150px;height:150px;
+  width:120px;height:120px;
   border-radius:50%;
+  background:var(--ice);
   margin:0 auto 20px;
-  display:block;
-  object-fit:cover;
-  object-position:center top;
+  display:flex;align-items:center;justify-content:center;
+  font-size:48px;
+  color:var(--mid-blue);
   border:3px solid var(--light-blue);
-  box-shadow:0 4px 16px rgba(30,58,95,0.15);
 }
 
 .cred-name{
@@ -316,11 +317,10 @@ section{padding:80px 28px;}
 
 .mission-text{
   font-family:'Cormorant Garamond',serif;
-  font-size:clamp(20px,3vw,28px);
-  line-height:1.6;font-weight:400;
-  max-width:700px;margin:0 auto;
-  color:rgba(255,255,255,.85);
-  font-style:italic;
+  font-size:clamp(18px,2.5vw,24px);
+  line-height:1.8;font-weight:400;
+  max-width:720px;margin:0 auto;
+  color:rgba(255,255,255,.88);
 }
 
 .mission-footer{
@@ -728,9 +728,6 @@ footer{
   border-bottom:1px solid rgba(255,255,255,.1);
 }
 
-.footer-brand-section{
-}
-
 .footer-brand{
   font-family:'Playfair Display',serif;
   font-size:20px;color:var(--white);
@@ -831,7 +828,7 @@ footer{
       <li><a href="#services">Services</a></li>
       <li><a href="#specialties">Specialties</a></li>
       <li><a href="#faq">FAQ</a></li>
-      <li><a href="#contact" class="nav-cta">Contact Me</a></li>
+      <li><a href="#contact" class="nav-cta">Contact Us</a></li>
     </ul>
   </div>
 </nav>
@@ -840,18 +837,11 @@ footer{
 <section class="hero">
   <div class="hero-water"></div>
   <svg class="hero-bridge" viewBox="0 0 1200 200" preserveAspectRatio="xMidYMid meet">
-    <!-- Bridge support pillars -->
     <rect x="200" y="20" width="30" height="100" fill="rgba(255,255,255,0.15)"/>
     <rect x="970" y="20" width="30" height="100" fill="rgba(255,255,255,0.15)"/>
-    
-    <!-- Bridge arch - creates the frame for the cross -->
     <path d="M 150,80 Q 600,0 1050,80" stroke="rgba(255,255,255,0.2)" stroke-width="4" fill="none"/>
     <path d="M 150,80 Q 600,5 1050,80" stroke="rgba(255,255,255,0.25)" stroke-width="3" fill="none"/>
-    
-    <!-- Bridge deck -->
     <rect x="150" y="75" width="900" height="10" fill="rgba(255,255,255,0.2)"/>
-    
-    <!-- Cable supports -->
     <line x1="200" y1="20" x2="200" y2="75" stroke="rgba(255,255,255,0.15)" stroke-width="3"/>
     <line x1="300" y1="35" x2="300" y2="75" stroke="rgba(255,255,255,0.12)" stroke-width="2"/>
     <line x1="400" y1="45" x2="400" y2="75" stroke="rgba(255,255,255,0.12)" stroke-width="2"/>
@@ -885,21 +875,22 @@ footer{
 <!-- ABOUT -->
 <section class="about" id="about">
   <div class="section-inner fade-in">
-    <p class="section-label">About Me</p>
+    <p class="section-label">About Us</p>
     <h2 class="section-title">Healing Through Faith & Clinical Excellence</h2>
     <div class="about-grid">
       <div class="about-text">
-        <p>Crossing The Bridge Counseling Services provides a compassionate, supportive, and non-judgmental therapeutic atmosphere. Ms. Román works to inspire individuals, families, and the community at large in implementing life-transforming behaviors while crossing the bridges of life.</p>
-        <p>Ms. Román believes mental health therapy is a collaboration between the therapist and the client — and that it is within the client's inner strength where the key to success is discovered. Whether you're navigating anxiety, grief, relationship challenges, or simply seeking a safe space to grow, Ms. Román walks alongside you with clinical expertise and genuine care.</p>
-        <p>Through both In-Office and Virtual Telehealth Counseling, Ms. Román is dedicated to serving Adolescents and Adults throughout the State of Florida.</p>
+        <p>Crossing The Bridge Counseling Services provides a compassionate, supportive, and non-judgmental therapeutic atmosphere. We work to inspire individuals, families, and the community at large in implementing life-transforming behaviors while crossing the bridges of life.</p>
+        <p>We believe mental health therapy is a collaboration between the therapist and the client — and that it is within the client's inner strength where the key to success is discovered. Whether you're navigating anxiety, grief, relationship challenges, or simply seeking a safe space to grow, we walk alongside you with clinical expertise and genuine care.</p>
         <div class="verse">
-          "For I know the plans I have for you," declares the Lord, "plans to prosper you and not to harm you, plans to give you hope and a future."
-          <span class="verse-ref">— Jeremiah 29:11 (NIV)</span>
+          "Come to me, all you who are weary and burdened, and I will give you rest."
+          <span class="verse-ref">— Matthew 11:28 (NIV)</span>
         </div>
+        <p>We offer In-Office and Virtual Telehealth Counseling Services, providing services to Lake County, Orange County, and nearby counties throughout Florida.</p>
       </div>
       <div class="about-credentials">
-        <!-- UPDATED: Real profile photo -->
-        <img class="cred-photo" src="Droman_website_picture.jpg" alt="Daisy Y. Román, Ed.S., LMHC — Licensed Mental Health Counselor">
+        <div class="cred-photo" aria-label="Daisy Y. Román">
+          👤
+        </div>
         <p class="cred-name">Daisy Y. Román, Ed.S., LMHC</p>
         <p class="cred-title">Licensed Mental Health Counselor</p>
         <ul class="cred-list">
@@ -909,7 +900,7 @@ footer{
           <li>Counseling & Psychology — University of Massachusetts</li>
           <li>Faith-Based Clinical Coursework — Liberty University</li>
           <li>National Certified Voluntary Pre-Kindergarten Teacher</li>
-          <li>Serving Adolescents and Adults</li>
+          <li>Serving children, adolescents, and adults</li>
         </ul>
         <p class="cred-since">In professional practice since 1998</p>
       </div>
@@ -922,7 +913,7 @@ footer{
   <div class="section-inner fade-in">
     <p class="section-label">Client Testimonials</p>
     <h2 class="section-title">Stories of Hope & Healing</h2>
-    <p class="section-desc">Hear from those who have walked this journey with Ms. Román.</p>
+    <p class="section-desc">Hear from those who have walked this journey with us.</p>
     <div class="testimonial-grid">
       <div class="testimonial-card">
         <div class="testimonial-quote">"</div>
@@ -946,9 +937,19 @@ footer{
 <!-- MISSION -->
 <section class="mission">
   <div class="section-inner fade-in" style="max-width:800px;">
-    <p class="section-label">Mission</p>
-    <h2 class="section-title">Why Ms. Román Does What She Does</h2>
-    <p class="mission-text">To create a compassionate, supportive, and non-judgmental therapeutic atmosphere — and to inspire individuals, families, and the community at large when implementing life-transforming behaviors while crossing the bridges of life.</p>
+    <p class="section-label">Our Mission</p>
+
+    <!-- ✏️ UPDATED: New heading and mission statement -->
+    <h2 class="section-title"><em>The Heart Behind The Bridge</em></h2>
+
+    <p class="mission-text">Behind every behavior is a story. Behind every struggle is a person worthy of being seen, heard, and guided toward wholeness.</p>
+
+    <p class="mission-text" style="margin-top:24px;">Ms. Román answers this calling because she knows what it is to walk through hard seasons — and she knows that no one should walk them alone. She understands suffering not from a textbook, but from the inside out. She recognizes the silent weight beneath broken behaviors, the quiet ache behind what so many cannot yet put into words.</p>
+
+    <p class="mission-text" style="margin-top:24px;">Grounded in faith, fueled by compassion, and humbled by the privilege of witnessing real transformation, Ms. Román walks alongside each client with one quiet conviction:</p>
+
+    <p class="mission-text" style="margin-top:20px;font-style:italic;font-weight:500;font-size:clamp(20px,3vw,28px);color:var(--gold-soft);">Healing is possible. For you. Right now.</p>
+
     <p class="mission-footer">CROSSING BRIDGES, ONE MILESTONE AT A TIME</p>
   </div>
 </section>
@@ -956,24 +957,24 @@ footer{
 <!-- SERVICES -->
 <section class="services" id="services">
   <div class="section-inner fade-in">
-    <p class="section-label">Services</p>
-    <h2 class="section-title">How Ms. Román Can Help</h2>
-    <p class="section-desc">Whether you're seeking one-on-one support, family healing, or group connection, Ms. Román tailors her approach to meet you where you are.</p>
+    <p class="section-label">Our Services</p>
+    <h2 class="section-title">How We Can Help</h2>
+    <p class="section-desc">Whether you're seeking one-on-one support, family healing, or group connection, we tailor our approach to meet you where you are.</p>
     <div class="services-grid">
       <div class="service-card">
         <div class="service-icon">👤</div>
         <h3>Individual Counseling</h3>
-        <p>A private, supportive space to explore your thoughts, beliefs, emotions, and behavior patterns. Together, Ms. Román works with you through your challenges using clinically proven and faith-informed methods.</p>
+        <p>A private, supportive space to explore your thoughts, beliefs, emotions, and behavior patterns. Together, we work through your challenges using clinically proven and faith-informed methods.</p>
       </div>
       <div class="service-card">
         <div class="service-icon">👨‍👩‍👧</div>
         <h3>Family Counseling</h3>
-        <p>Strengthening the bonds that matter most. Ms. Román helps families navigate conflict, improve communication, and restore connection through guided therapeutic work.</p>
+        <p>Strengthening the bonds that matter most. We help families navigate conflict, improve communication, and restore connection through guided therapeutic work.</p>
       </div>
       <div class="service-card">
         <div class="service-icon">🤝</div>
         <h3>Group Counseling</h3>
-        <p>Healing doesn't happen in isolation. Ms. Román's group sessions provide shared support and the power of communal witness as you walk through life's challenges together.</p>
+        <p>Healing doesn't happen in isolation. Our group sessions provide shared support and the power of communal witness as you walk through life's challenges together.</p>
       </div>
       <div class="service-card">
         <div class="service-icon">📋</div>
@@ -989,12 +990,12 @@ footer{
   <div class="section-inner fade-in">
     <p class="section-label">Getting Started</p>
     <h2 class="section-title">What to Expect in Your First Session</h2>
-    <p class="section-desc">Starting counseling can feel overwhelming. Here's what your journey with Ms. Román looks like.</p>
+    <p class="section-desc">Starting counseling can feel overwhelming. Here's what your journey with us looks like.</p>
     <div class="expect-grid">
       <div class="expect-step">
         <div class="expect-number">1</div>
         <h3>Initial Contact</h3>
-        <p>Call or email to schedule your first appointment. Ms. Román will discuss your needs and answer any questions you have about the process.</p>
+        <p>Call or email us to schedule your first appointment. We'll discuss your needs and answer any questions you have about the process.</p>
       </div>
       <div class="expect-step">
         <div class="expect-number">2</div>
@@ -1019,18 +1020,20 @@ footer{
 <section class="specialties" id="specialties">
   <div class="section-inner fade-in">
     <p class="section-label">Areas of Focus</p>
-    <h2 class="section-title">Specialties & Areas of Expertise</h2>
-    <p class="section-desc">Ms. Román guides and counsels clients across a wide range of life challenges and clinical concerns.</p>
+    <h2 class="section-title">Specialties & Areas We Treat</h2>
+    <p class="section-desc">We guide and counsel clients across a wide range of life challenges and clinical concerns.</p>
     <div class="spec-grid">
       <span class="spec-tag">Anxiety</span>
       <span class="spec-tag">Depression</span>
       <span class="spec-tag">Grief & Loss</span>
+      <span class="spec-tag">Anger Management</span>
       <span class="spec-tag">Relationships</span>
       <span class="spec-tag">Parenting</span>
       <span class="spec-tag">Post-Traumatic Stress (PTSD)</span>
       <span class="spec-tag">Stress Management</span>
       <span class="spec-tag">Substance Abuse & Addictions</span>
       <span class="spec-tag">Behavioral Changes</span>
+      <span class="spec-tag">Self-Esteem</span>
       <span class="spec-tag">Life Transitions</span>
     </div>
   </div>
@@ -1041,7 +1044,7 @@ footer{
   <div class="section-inner fade-in">
     <p class="section-label">Therapeutic Approach</p>
     <h2 class="section-title">Evidence-Based, Faith-Informed</h2>
-    <p class="section-desc">Ms. Román utilizes various therapeutic modalities independently tailored to each client's unique needs.</p>
+    <p class="section-desc">We utilize various therapeutic modalities independently tailored to each client's unique needs.</p>
     <div class="approach-grid">
       <div class="approach-item">
         <h4>Cognitive Behavioral Therapy</h4>
@@ -1077,8 +1080,8 @@ footer{
     <p class="section-label">Payment & Insurance</p>
     <h2 class="section-title">Insurance & Payment Options</h2>
     <div class="insurance-note">
-      <p><strong>Ms. Román accepts most major insurance plans.</strong> Please contact her to verify your specific coverage. Self-pay options are also available for those without insurance or who prefer not to use insurance.</p>
-      <p><strong>Session Fees:</strong> Please call for current rates and payment options. Ms. Román believes everyone deserves access to quality mental health care and will work with you to find a solution that fits your situation.</p>
+      <p><strong>We accept most major insurance plans.</strong> Please contact us to verify your specific coverage. We also offer self-pay options for those without insurance or who prefer not to use insurance.</p>
+      <p><strong>Session Fees:</strong> Please call for current rates and payment options. We believe everyone deserves access to quality mental health care and will work with you to find a solution that fits your situation.</p>
       <p><strong>Confidentiality:</strong> All sessions are completely confidential in accordance with HIPAA regulations and professional ethical standards.</p>
     </div>
   </div>
@@ -1089,7 +1092,7 @@ footer{
   <div class="section-inner fade-in">
     <p class="section-label">Common Questions</p>
     <h2 class="section-title">Frequently Asked Questions</h2>
-    <p class="section-desc">Have questions? Ms. Román is here to help you understand what to expect.</p>
+    <p class="section-desc">Have questions? We're here to help you understand what to expect.</p>
     <div class="faq-list">
       <div class="faq-item">
         <button class="faq-question" onclick="toggleFaq(this)">
@@ -1102,7 +1105,7 @@ footer{
           </div>
         </div>
       </div>
-      
+
       <div class="faq-item">
         <button class="faq-question" onclick="toggleFaq(this)">
           Do you offer virtual/telehealth sessions?
@@ -1110,11 +1113,11 @@ footer{
         </button>
         <div class="faq-answer">
           <div class="faq-answer-inner">
-            Yes! Ms. Román offers both in-office and virtual telehealth sessions via secure video conferencing. This allows you to receive quality care from the comfort of your own home.
+            Yes! We offer both in-office and virtual telehealth sessions via secure video conferencing. This allows you to receive quality care from the comfort of your own home.
           </div>
         </div>
       </div>
-      
+
       <div class="faq-item">
         <button class="faq-question" onclick="toggleFaq(this)">
           Is counseling confidential?
@@ -1122,11 +1125,11 @@ footer{
         </button>
         <div class="faq-answer">
           <div class="faq-answer-inner">
-            Absolutely. All sessions are completely confidential and protected by HIPAA regulations and professional ethical standards. Limited exceptions include situations involving imminent danger to self or others, or suspected child/elder abuse, which Ms. Román is legally required to report.
+            Absolutely. All sessions are completely confidential and protected by HIPAA regulations and professional ethical standards. Limited exceptions include situations involving imminent danger to self or others, or suspected child/elder abuse, which we are legally required to report.
           </div>
         </div>
       </div>
-      
+
       <div class="faq-item">
         <button class="faq-question" onclick="toggleFaq(this)">
           How many sessions will I need?
@@ -1134,11 +1137,11 @@ footer{
         </button>
         <div class="faq-answer">
           <div class="faq-answer-inner">
-            This varies greatly depending on your individual needs and goals. Some clients find relief in just a few sessions, while others benefit from longer-term support. Ms. Román will work with you to determine what's best and regularly review your progress.
+            This varies greatly depending on your individual needs and goals. Some clients find relief in just a few sessions, while others benefit from longer-term support. We'll work together to determine what's best for you and regularly review your progress.
           </div>
         </div>
       </div>
-      
+
       <div class="faq-item">
         <button class="faq-question" onclick="toggleFaq(this)">
           Do I need to be religious to benefit from faith-based counseling?
@@ -1146,11 +1149,11 @@ footer{
         </button>
         <div class="faq-answer">
           <div class="faq-answer-inner">
-            Not at all. While Ms. Román offers faith-based counseling for those who desire it, she respects all belief systems and can tailor her approach to align with your personal values and preferences. Her primary goal is to support your healing journey in a way that feels right for you.
+            Not at all. While we offer faith-based counseling for those who desire it, we respect all belief systems and can tailor our approach to align with your personal values and preferences. Our primary goal is to support your healing journey in a way that feels right for you.
           </div>
         </div>
       </div>
-      
+
       <div class="faq-item">
         <button class="faq-question" onclick="toggleFaq(this)">
           What if I need to cancel or reschedule?
@@ -1158,19 +1161,19 @@ footer{
         </button>
         <div class="faq-answer">
           <div class="faq-answer-inner">
-            Life happens! Ms. Román asks that you provide at least 24 hours notice for cancellations or rescheduling whenever possible. This allows her to offer the time slot to someone else in need. Please reach out as soon as you know you need to make a change.
+            Life happens! We ask that you provide at least 24 hours notice for cancellations or rescheduling whenever possible. This allows us to offer the time slot to someone else in need. Please contact us as soon as you know you need to make a change.
           </div>
         </div>
       </div>
-      
+
       <div class="faq-item">
         <button class="faq-question" onclick="toggleFaq(this)">
-          Can I bring my teenager to counseling?
+          Can I bring my child to counseling?
           <span class="faq-icon">▼</span>
         </button>
         <div class="faq-answer">
           <div class="faq-answer-inner">
-            Yes! Ms. Román works with Adolescents and families. For clients under 18, parental consent is required, and Ms. Román typically involves parents in the treatment process to ensure the best outcomes.
+            Yes! We work with children, adolescents, and families. For children under 18, we'll need parental consent and typically involve parents in the treatment process to ensure the best outcomes.
           </div>
         </div>
       </div>
@@ -1238,15 +1241,15 @@ footer{
           <div class="contact-icon">🗺️</div>
           <div>
             <p class="contact-label">Areas Served</p>
-            <p class="contact-value">State of Florida</p>
+            <p class="contact-value">Lake County, Orange County & nearby counties</p>
           </div>
         </div>
       </div>
-      
+
       <div class="contact-form-box">
         <h3>Request an Appointment</h3>
         <div class="form-disclaimer">
-          <p><strong>📋 Note:</strong> This form is for appointment requests only. Please do not include detailed medical or mental health information. Ms. Román will discuss your needs confidentially during your scheduled appointment.</p>
+          <p><strong>📋 Note:</strong> This form is for appointment requests only. Please do not include detailed medical or mental health information. We will discuss your needs confidentially during our scheduled appointment.</p>
         </div>
         <form action="https://formspree.io/f/mnjbvjjj" method="POST">
           <div class="form-group">
@@ -1274,11 +1277,11 @@ footer{
           </div>
           <div class="form-group">
             <label for="message">Message</label>
-            <textarea id="message" name="message" placeholder="Tell me a bit about what brings you here..."></textarea>
+            <textarea id="message" name="message" placeholder="Tell us a bit about what brings you here..."></textarea>
           </div>
           <input type="hidden" name="_subject" value="New Appointment Request - Crossing The Bridge">
           <button type="submit" class="form-submit">Submit Request</button>
-          <p class="form-note">Ms. Román will respond within 1-2 business days to schedule your appointment.</p>
+          <p class="form-note">We'll respond within 1-2 business days to schedule your appointment.</p>
         </form>
       </div>
     </div>
@@ -1294,9 +1297,9 @@ footer{
       <div class="footer-brand-section">
         <p class="footer-brand">Crossing The Bridge Counseling Services, LLC</p>
         <p class="footer-tagline-f">Crossing Bridges, One Milestone at a Time</p>
-        <p>Faith-based mental health counseling serving clients throughout the State of Florida.</p>
+        <p>Faith-based mental health counseling serving Lake County, Orange County, and surrounding areas in Florida.</p>
       </div>
-      
+
       <div class="footer-section">
         <h5>Quick Links</h5>
         <ul class="footer-links">
@@ -1307,7 +1310,7 @@ footer{
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
-      
+
       <div class="footer-section">
         <h5>Resources</h5>
         <ul class="footer-links">
@@ -1318,10 +1321,10 @@ footer{
         </ul>
       </div>
     </div>
-    
+
     <div class="footer-bottom">
-      <p class="footer-copy">&copy; 2026 Crossing The Bridge Counseling Services, LLC. All rights reserved. Clermont, Florida.</p>
-      <p class="footer-verse">"Come to me, all you who are weary and burdened, and I will give you rest." — Matthew 11:28 (NIV)</p>
+      <p class="footer-copy">&copy; 2025 Crossing The Bridge Counseling Services, LLC. All rights reserved. Clermont, Florida.</p>
+      <p class="footer-verse">"For I know the plans I have for you," declares the Lord, "plans to prosper you and not to harm you, plans to give you hope and a future." — Jeremiah 29:11</p>
     </div>
   </div>
 </footer>
@@ -1349,13 +1352,13 @@ function toggleFaq(button) {
   const item = button.parentElement;
   const answer = item.querySelector('.faq-answer');
   const isActive = item.classList.contains('active');
-  
+
   // Close all other FAQs
   document.querySelectorAll('.faq-item').forEach(faq => {
     faq.classList.remove('active');
     faq.querySelector('.faq-answer').style.maxHeight = null;
   });
-  
+
   // Toggle current FAQ
   if (!isActive) {
     item.classList.add('active');
@@ -1366,4 +1369,3 @@ function toggleFaq(button) {
 
 </body>
 </html>
- 
