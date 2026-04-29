@@ -308,9 +308,27 @@ section{padding:80px 28px;}
 }
 
 /* ===== MISSION ===== */
-.mission{
-  background:linear-gradient(165deg,var(--navy),var(--deep-blue));
-  color:var(--white);text-align:center;
+ .mission{
+position:relative;
+background-image:url('background_for_website.png');
+background-size:cover;
+background-position:center center;
+background-repeat:no-repeat;
+color:var(--white);
+text-align:center;
+overflow:hidden;
+}
+.mission::before{
+content:'';
+position:absolute;
+inset:0;
+background:linear-gradient(165deg,rgba(30,58,95,0.82) 0%,rgba(44,79,124,0.78) 50%,rgba(30,58,95,0.85) 100%);
+z-index:1;
+}
+.mission .section-inner{
+position:relative;
+z-index:2;
+max-width:800px;
 }
 .mission .section-label{color:var(--gold-soft);}
 .mission .section-title{color:var(--white);}
